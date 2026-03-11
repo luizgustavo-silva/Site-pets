@@ -1,0 +1,13 @@
+linear-gradient(135deg, #ffe5ec 0%, #e0f7fa 100%);
+<div class="CTA-container">
+      <div class="title-CTA">
+        <h1>Encontre seu Melhor amigo</h1>
+        <p>
+          Adote um pet e transforme vidas. Milhares de animais esperando por um
+          lar cheio de amor!
+        </p>
+        <button class="btn-quero_adotar">Quero Adotar</button>
+        <button class="btn-saiba_mais"> Saiba Mais</button>
+      </div>
+      <img src=""> 
+    </div>

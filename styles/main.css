@@ -1,0 +1,111 @@
+:root {
+  --cor-principal: linear-gradient(135deg, #e37d9a, #58c0c7);
+  --primary-color: #e37d9a;
+  --secondary-color: #58c0c7;
+  --fonte-principal: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--fonte-principal);
+}
+
+/* ==================== MENU ==================== */
+.menu-container {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 0 10%;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-sizing: border-box;
+}
+
+.menu-logo {
+  display: flex;
+  align-items: center; /* centraliza verticalmente */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.menu-logo_span {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.paw-icon {
+  margin-right: 10px;
+  display: inline-block;
+  animation: pular 2.5s infinite ease-in-out;
+}
+
+@keyframes pular {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ==================== BOTÕES ==================== */
+.menu-link_container {
+  display: flex; /* botões lado a lado */
+  gap: 20px; /* espaço entre os botões */
+}
+
+.menu-link_home,
+.menu-link_pets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 550;
+  padding: 8px 16px;
+  border-radius: 35px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.menu-link_home.ativo,
+.menu-link_pets.ativo {
+  background: var(--cor-principal);
+  color: white;
+}
+
+.menu-link_pets {
+  background: none;
+  color: rgba(0, 0, 0, 0.226);
+  width: 80px;
+  height: 40px;
+}
+
+.menu-link_pets:hover {
+  background: var(--cor-principal);
+  color: white;
+  border-radius: 35px;
+  font-weight: 550;
+}
+
+.menu-link_home {
+  width: 80px;
+  height: 40px;
+  color: rgba(0, 0, 0, 0.226);
+  border-radius: 35px;
+}
+.menu-link_home:hover {
+  background: var(--cor-principal);
+  color: white;
+  border-radius: 35px;
+  font-weight: 550;
+}
