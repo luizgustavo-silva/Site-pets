@@ -1,9 +1,4 @@
-:root {
-  --cor-principal: linear-gradient(135deg, #e37d9a, #58c0c7);
-  --primary-color: #e37d9a;
-  --secondary-color: #58c0c7;
-  --fonte-principal: Arial, Helvetica, sans-serif;
-}
+@import url("variaveis.css");
 
 body {
   font-family: var(--fonte-principal);
@@ -20,6 +15,10 @@ body {
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   box-sizing: border-box;
+  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .menu-logo {

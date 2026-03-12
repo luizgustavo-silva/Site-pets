@@ -1,0 +1,96 @@
+@import url("variaveis.css");
+
+.hero-container {
+  width: 90%;
+  height: 600px;
+  background: linear-gradient(135deg, #ffe5ec 0%, #e0f7fa 100%);
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.hero-content {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.hero-title {
+  font-size: 65px;
+  font-weight: bold;
+  background: linear-gradient(135deg, var(--primary-color), var(--purple-dark));
+  margin-left: 30px;
+  height: 150px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-subtitle {
+  font-size: 23px;
+  margin-left: 30px;
+  font-weight: 400;
+  color: var(--text-light);
+}
+.hero-img {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+.hero-pet_image {
+  width: 80%;
+  height: 80%;
+}
+.hero-btns {
+  display: flex;
+  align-self: flex-start; 
+  gap: 25px;
+  margin-top: 25px;
+}
+
+
+.hero-btn_primary,
+.hero-btn_secondary {
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; 
+  border-radius: 35px;
+  font-size: 15px;
+  width: 165px;
+  height: 60px; 
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer; 
+}
+
+
+.hero-btn_primary {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+  border: none;
+  margin-left: 30px;
+}
+
+.hero-btn_primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 157, 0.6);
+}
+
+
+.hero-btn_secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.hero-btn_secondary:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+}

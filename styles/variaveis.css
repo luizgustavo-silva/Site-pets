@@ -1,0 +1,21 @@
+:root {
+  --primary-color: #ff6b9d;
+  --primary-dark: #e84a7f;
+  --secondary-color: #4ecdc4;
+  --secondary-dark: #3bafaa;
+  --accent-color: #ffe66d;
+  --accent-dark: #ffd93d;
+  --purple: #a8dadc;
+  --purple-dark: #457b9d;
+  --orange: #f4a261;
+  --green: #2a9d8f;
+  --dark: #264653;
+  --text-dark: #2c3e50;
+  --text-light: #6c757d;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.15);
+  --fonte-principal: "Poppins", sans-serif;
+  --cor-principal: linear-gradient(135deg, #e37d9a, #58c0c7);
+}
