@@ -1,5 +1,9 @@
 @import url("variaveis.css");
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: var(--fonte-principal);
 }
@@ -15,7 +19,7 @@ body {
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   box-sizing: border-box;
-  
+
   position: sticky;
   top: 0;
   z-index: 1000;
