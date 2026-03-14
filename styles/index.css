@@ -1,5 +1,7 @@
 @import url("variaveis.css");
-
+html {
+  scroll-behavior: smooth;
+}
 .hero-container {
   width: 90%;
   height: 600px;
@@ -195,7 +197,66 @@
   color: var(--text-light);
   font-weight: 400;
 }
+.how-it-works {
+  text-align: center;
+  width: 100%;
+}
+.how-it-works h2 {
+  color: var(--dark);
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 35px;
+}
+.step-flex {
+  display: flex;
+  gap: 60px;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.step-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  line-height: 1.5;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.step-card:hover {
+  transform: translateY(-5px);
+}
+.step-card h3 {
+  color: var(--dark);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.step-card p {
+  color: var(--text-light);
+}
 
+.step-number {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+
+  background: var(--cor-principal);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 
 @keyframes slideLeft {
   from {
