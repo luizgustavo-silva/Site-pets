@@ -27,7 +27,7 @@ body {
 
 .menu-logo {
   display: flex;
-  align-items: center; /* centraliza verticalmente */
+  align-items: center;
   font-size: 28px;
   font-weight: bold;
 }
@@ -111,4 +111,63 @@ body {
   color: white;
   border-radius: 35px;
   font-weight: 550;
+}
+.footer-container {
+  background: var(--dark);
+  height: 250px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  width: 50%;
+}
+.paw-icon_footer {
+  margin-right: 10px;
+  display: inline-block;
+  animation: pular 2.5s infinite ease-in-out;
+  font-size: 30px;
+}
+.footer-logo_span {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 25px;
+}
+.footer-section h4 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.footer-section a {
+  opacity: 0.7;
+  text-decoration: none;
+  color: white;
+}
+.footer-section p {
+  opacity: 0.7;
+}
+.footer-bottom {
+  text-align: center;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0.5;
+}
+.footer-bottom p {
+  margin-top: 40px;
 }
