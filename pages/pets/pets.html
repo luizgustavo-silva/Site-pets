@@ -3,14 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="pets.css" />
     <title>PetLove - Adocao de Pets</title>
     <script src="pets.js" defer></script>
     <script src="../../scripts/rodape.js" defer></script>
   </head>
   <body>
-    <div class="container-principal" id="container-principal"></div>
+    <div class="container-principal" id="container-principal">
+      <div class="pets-section">
+        <div class="container-pets">
+          <div class="pets-title">
+            <h2>Nossos Pets Disponíveis</h2>
+            <p>Conheça os animais que estão buscando um novo lar</p>
+          </div>
+          <div class="filtros">
+            <button class="filter-all" onclick="carregarTodos();">
+              Todos
+            </button>
+            <button
+              class="filter-cachorros"
+              onclick="carregarCachorros();"
+            >
+              🐶 Cachorros
+            </button>
+            <button class="filter-gatos" onclick="carregarGatos();">
+              😸 Gatos
+            </button>
+          </div>
+          <div class="pets-cards_container" id="pets-cards_container"/>
+            <!-- <div class="pet-card">
+              <div class="pet-img">
+                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500" />
+              </div>
+                <div class="information-pet">
+                  <h3 class="nome-pet">Thor</h3>
+                  <p class="pet-breed">Labrador • 3 anos • Macho</p>
+                  <p class="descricao-pet">
+                    Thor é um cãozinho muito carinhoso e brincalhão! Adora
+                    correr no parque.
+                  </p>
+                  <div class="pet-detalhes">
+                    <span class="detalhe-item">📏 Grande</span>
+                    <span class="detalhe-item">🎨 Dourado</span>
+                    <span class="detalhe-item">💉 Vacinado</span>
+                    <span class="detalhe-item">✂️ Castrado</span>
+                  </div>
+                  <a href="#" class="btn-ver-pet"
+                    >Quero Adotar</a
+                  >
+                </div>
+            </div> -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer-container" id="footer-container"></footer>
   </body>
 </html>
