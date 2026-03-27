@@ -18,4 +18,5 @@
   --shadow-lg: rgba(0, 0, 0, 0.15);
   --fonte-principal: "Poppins", sans-serif;
   --cor-principal: linear-gradient(135deg, #e37d9a, #58c0c7);
+  --base: #ff6b6b;
 }

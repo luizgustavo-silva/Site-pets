@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/reset.css" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../../scripts/menu.js" defer></script>
+    <script src="../../scripts/rodape.js" defer></script>
+    <script src="form.js" defer></script>
+    <title>PetLove - Adocao de Pets</title>
+  </head>
+  <body>
+    <div class="container-principal" id="container-principal">
+      <form class="container-form" id="container_form" onsubmit="enviarCadastro(event)">
+        <a href="../pets/pets.html" class="voltar-link">← Voltar para Listagem</a>
+        <div class="form-head">
+          <h1>Formulário de Adoção</h1>
+          <p>Preencha os dados abaixo para iniciar o processo de adoção</p>
+        </div>
+        <div class="adocao-form">
+          <div>
+            <img src="#" id="foto_do_pet" alt="foto do pet" class="foto_do_pet" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input_nome">Nome Completo *</label>
+              <input type="text" id="input_nome" class="input-nome" />
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone/WhatsApp *</label>
+              <input
+                type="number"
+                placeholder="(00) 00000-0000"
+                id="input_telefone"
+                class="input_telefone"
+              />
+            </div>
+          </div>
+          <label for="tipo_moradia">Tipo de Moradia *</label>
+          <select class="select_moradia" id="tipo_moradia">
+            <option>Selecione...</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Sitio/Chacara</option>
+          </select>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="condicao_moradia">Condição do Imóvel *</label>
+              <select class="select_condicao-moradia" id="condicao_moradia">
+                <option>Selecione...</option>
+                <option>Proprio</option>
+                <option>Alugado</option>
+                <option>Casa de Familiares</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pessoas_casa">Quantas pessoas moram na casa? *</label>
+              <input type="number" class="input_pessoas-casa" id="pessoas_casa" />
+            </div>
+          </div>
+          <label for="motivo_adocao" class="label_textarea-motivo">Por que deseja adotar este pet? *</label>
+          <textarea placeholder="Conte-nos sua motivacao..." class="textarea-motivacao" id="textarea-motivacao"></textarea>
+          <ul class="termos_autorizacao">
+            <strong> Declaro que:</strong>
+            <li>
+              As informações são verdadeiras e estou ciente da responsabilidade
+              da adoção
+            </li>
+            <li>
+              Me comprometo a fornecer alimentação, cuidados veterinários e
+              carinho
+            </li>
+            <li>
+              Permitirei visitas de acompanhamento e não abandonarei o animal
+            </li>
+          </ul>
+          <label class="label-checkbox">
+            <input
+              type="checkbox"
+              id="termos_aceitos"
+              class="input_termos-aceitar"
+            />
+            <span for="termos_aceitar" class="label_termos-aceitar">
+              Li e aceito todos os termos acima *</
+            >
+          </label>
+          <button type="submit" class="btn-enviar">
+            Enviar Solicitação de Adoção
+          </button>
+        </div>
+      </form>
+    </div>
+    <footer class="footer-container" id="footer-container"></footer>
+  </body>
+</html>

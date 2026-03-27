@@ -6,8 +6,8 @@ function loadingMenu() {
         <span class="menu-logo_span">PetLove</span>
       </div>
       <div class="menu-link_container">
-         <a id="tela1" class="menu-link_home" href="./index.html">Home</a>
-          <a id="tela2" class="menu-link_pets" href="./pages/pets/pets.html">Pets</a>
+         <a id="tela1" class="menu-link_home" href="/index.html">Home</a>
+          <a id="tela2" class="menu-link_pets" href="/pages/pets/pets.html">Pets</a>
       </div>
     </div>`;
 

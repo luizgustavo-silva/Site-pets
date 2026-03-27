@@ -59,7 +59,7 @@ async function carregarTodos() {
                     <span class="detalhe-item">💉 Vacinado</span>
                     <span class="detalhe-item">✂️ Castrado</span>
                   </div>
-                  <a href=""?imagem=${pet.imagem} class="btn-ver-pet"
+                  <a href="../adocao/form.html?imagem=${pet.imagem}" class="btn-ver-pet"
                     >Quero Adotar</a
                   >
                 </div>
@@ -95,7 +95,7 @@ async function carregarPets(tipo) {
                     <span class="detalhe-item">💉 Vacinado</span>
                     <span class="detalhe-item">✂️ Castrado</span>
                   </div>
-                  <a href=""?imagem=${pet.imagem} class="btn-ver-pet"
+                  <a href="../adocao/form.html?imagem=${pet.imagem}" class="btn-ver-pet"
                     >Quero Adotar</a
                   >
                 </div>
@@ -115,7 +115,6 @@ async function carregarCachorros() {
 }
 
 async function carregarGatos() {
-
   document
     .querySelectorAll(".filtros button")
     .forEach((btn) => btn.classList.remove("active"));
