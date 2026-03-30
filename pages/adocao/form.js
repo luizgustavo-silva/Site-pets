@@ -30,16 +30,16 @@ function validarCampos() {
   if (input_telefone_valor === "") {
     input_telefone.style.backgroundColor = "#f31a1a36";
   }
-  if (tipo_moradia_valor === "Selecione..." || tipo_moradia_valor === "") {
+  if (tipo_moradia_valor === "") {
     tipo_moradia.style.backgroundColor = "#f31a1a36";
   }
-  if (
-    condicao_moradia_valor === "Selecione..." ||
-    condicao_moradia_valor === ""
-  ) {
+  if (condicao_moradia_valor === "") {
     condicao_moradia.style.backgroundColor = "#f31a1a36";
   }
   if (qtd_pessoas_valor === "") {
+    qtd_pessoas.style.backgroundColor = "#f31a1a36";
+  }
+  if (qtd_pessoas_valor !== "" && Number(qtd_pessoas_valor) < 1) {
     qtd_pessoas.style.backgroundColor = "#f31a1a36";
   }
   if (textarea_motivo_valor === "") {
@@ -63,13 +63,67 @@ function validarCampos() {
   textarea_motivo.addEventListener("change", function () {
     textarea_motivo.style.backgroundColor = "white";
   });
+  return;
 }
+document
+  .getElementById("adocao-form")
+  .addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const botao = document.querySelector(".btn-enviar");
+
+    // estado carregando
+    botao.querySelector(".texto").innerText = "Enviando...";
+    botao.disabled = true;
+
+    const qtdPessoasCasa = Number(
+      document.getElementById("pessoas_casa").value,
+    );
+    if (isNaN(qtdPessoasCasa) || qtdPessoasCasa < 1) {
+      alert("Informe pelo menos 1 pessoa morando na casa.");
+      const qtd_pessoas = document.getElementById("pessoas_casa");
+      qtd_pessoas.style.backgroundColor = "#f31a1a36";
+      botao.querySelector(".texto").innerText = "Enviar Solicitação de Adoção";
+      botao.disabled = false;
+      return;
+    }
+
+    try {
+      let dados = {
+        nomeCompleto: document.getElementById("input_nome").value,
+        telefone: document.getElementById("input_telefone").value,
+        tipoMoradia: document.getElementById("tipo_moradia").value,
+        condicaoImovel: document.getElementById("condicao_moradia").value,
+        numeroResidentes: qtdPessoasCasa,
+        motivoAdocao: document.getElementById("textarea-motivacao").value,
+      };
+      let resposta = await fetch("http://localhost:3000/api/adoptions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dados),
+      });
+
+      if (resposta.ok) {
+        botao.classList.add("sucesso");
+      } else {
+        botao.querySelector(".texto").innerText = "Erro ao enviar";
+        botao.disabled = false;
+      }
+    } catch (erro) {
+      console.error(erro);
+      botao.querySelector(".texto").innerText = "Erro na conexão";
+      botao.disabled = false;
+    }
+  });
+
 function inicializarBotaoTermos() {
   const termos = document.getElementById("termos_aceitos");
   const botao = document.querySelector(".btn-enviar");
   if (!termos || !botao) return;
 
-  botao.disabled = !termos.checked;
+  botao.disabled = true;
 
   termos.addEventListener("change", function () {
     botao.disabled = !termos.checked;

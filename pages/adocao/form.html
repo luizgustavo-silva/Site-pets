@@ -19,7 +19,7 @@
   </head>
   <body>
     <div class="container-principal" id="container-principal">
-      <form class="container-form" id="container_form" onsubmit="enviarCadastro(event)">
+      <form class="container-form" id="adocao-form">
         <a href="../pets/pets.html" class="voltar-link">← Voltar para Listagem</a>
         <div class="form-head">
           <h1>Formulário de Adoção</h1>
@@ -46,25 +46,25 @@
           </div>
           <label for="tipo_moradia">Tipo de Moradia *</label>
           <select class="select_moradia" id="tipo_moradia">
-            <option>Selecione...</option>
-            <option>Casa</option>
-            <option>Apartamento</option>
-            <option>Sitio/Chacara</option>
+            <option value="">Selecione...</option>
+            <option value="casa">Casa</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="sitio_chacara">Sitio/Chacara</option>
           </select>
 
           <div class="form-row">
             <div class="form-group">
               <label for="condicao_moradia">Condição do Imóvel *</label>
               <select class="select_condicao-moradia" id="condicao_moradia">
-                <option>Selecione...</option>
-                <option>Proprio</option>
-                <option>Alugado</option>
-                <option>Casa de Familiares</option>
+                <option value="">Selecione...</option>
+                <option value="proprio">Proprio</option>
+                <option value="alugado">Alugado</option>
+                <option value="casa_familiares">Casa de Familiares</option>
               </select>
             </div>
             <div class="form-group">
               <label for="pessoas_casa">Quantas pessoas moram na casa? *</label>
-              <input type="number" class="input_pessoas-casa" id="pessoas_casa" />
+              <input type="number" min="1" value="1" class="input_pessoas-casa" id="pessoas_casa" />
             </div>
           </div>
           <label for="motivo_adocao" class="label_textarea-motivo">Por que deseja adotar este pet? *</label>
@@ -89,12 +89,13 @@
               id="termos_aceitos"
               class="input_termos-aceitar"
             />
-            <span for="termos_aceitar" class="label_termos-aceitar">
+            <span class="label_termos-aceitar">
               Li e aceito todos os termos acima *</
             >
           </label>
           <button type="submit" class="btn-enviar">
-            Enviar Solicitação de Adoção
+            <span class="texto">Enviar Solicitação de Adoção</span>
+            <span class="check">✔</span>
           </button>
         </div>
       </form>

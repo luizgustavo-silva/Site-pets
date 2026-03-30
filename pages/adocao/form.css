@@ -221,3 +221,54 @@ ul {
   cursor: not-allowed;
   opacity: 0.7;
 }
+.btn-enviar {
+  position: relative;
+  overflow: hidden;
+}
+
+/* texto normal */
+.btn-enviar .texto {
+  transition: opacity 0.3s ease;
+}
+
+/* check escondido */
+.btn-enviar .check {
+  position: absolute;
+  font-size: 22px;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.4s ease;
+}
+
+/* estado de sucesso */
+.btn-enviar.sucesso {
+  background: #28a745; /* verde */
+}
+
+/* some texto */
+.btn-enviar.sucesso .texto {
+  opacity: 0;
+}
+
+/* aparece check */
+.btn-enviar.sucesso .check {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* animação extra (efeito pop) */
+.btn-enviar.sucesso .check {
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
