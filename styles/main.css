@@ -171,3 +171,44 @@ body {
 .footer-bottom p {
   margin-top: 40px;
 }
+
+/* Responsive for menu and footer */
+@media (max-width: 768px) {
+  .menu-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 16px;
+    height: auto;
+    gap: 10px;
+  }
+  .menu-link_container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .footer-container {
+    padding: 20px;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-section {
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-logo {
+    font-size: 22px;
+  }
+  .footer-container {
+    height: auto;
+    padding: 16px;
+  }
+  .footer-bottom p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+}

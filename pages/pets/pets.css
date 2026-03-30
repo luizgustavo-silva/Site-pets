@@ -140,3 +140,52 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(244, 162, 97, 0.4);
 }
+
+/* Responsive Mobile */
+@media (max-width: 1024px) {
+  .filtros {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .pets-cards_container {
+    width: 95%;
+    gap: 20px;
+    justify-content: center;
+  }
+  .pet-card {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .pet-card {
+    width: 100%;
+  }
+  .pet-img {
+    height: 220px;
+  }
+  .nome-pet {
+    font-size: 22px;
+  }
+  .pet-breed,
+  .descricao-pet,
+  .pet-detalhes {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filtros button {
+    width: 100%;
+    font-size: 14px;
+  }
+  .pet-img {
+    height: 180px;
+  }
+  .detalhe-item {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

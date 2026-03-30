@@ -272,3 +272,58 @@ ul {
     transform: scale(1.2);
   }
 }
+
+/* Responsive Mobile */
+@media (max-width: 1024px) {
+  .adocao-form {
+    width: 90%;
+  }
+  .voltar-link {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-head h1 {
+    font-size: 32px;
+  }
+  .form-head p {
+    font-size: 18px;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .texto,
+  .check {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .adocao-form {
+    width: 97%;
+    padding: 15px;
+  }
+  .foto_do_pet {
+    width: 100px;
+    height: 100px;
+  }
+  .btn-enviar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .label_textarea-motivo,
+  .termos_autorizacao {
+    font-size: 14px;
+  }
+  .textarea-motivacao {
+    height: 90px;
+  }
+  .input_termos-aceitar {
+    width: 16px;
+    height: 16px;
+  }
+}
